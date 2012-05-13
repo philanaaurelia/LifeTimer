@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+      
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/LinearLayout01" 
+    android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+	
+	<LinearLayout android:id="@+id/LinearLayout02"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+		
+		<EditText 
+			android:id="@+id/emailaddress"
+			android:width="300dip"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="SC.Taboo@gmail.com"/>
+	 </LinearLayout>
+
+		<LinearLayout android:id="@+id/LinearLayout03"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			
+			<EditText
+				android:id="@+id/emailsubject"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:width="300dip"
+				android:text="LifeTimer App Feedback"/>
+
+      </LinearLayout>
+
+      <EditText 
+      	android:id="@+id/emailtext"
+      	android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:lines="5" 
+		android:width="300dip">
+      </EditText>
+     
+	<LinearLayout android:id="@+id/LLButtons04"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:orientation="horizontal"> 
+		
+		<Button android:id="@+id/email_send"
+			android:width="100px"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Send"/>
+      
+		<Button android:id="@+id/email_discard" 
+			android:width="100px"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="Discard"/>
+	
+	</LinearLayout>
+
+</LinearLayout>

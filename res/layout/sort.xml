@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+ 	android:layout_width="fill_parent"
+  	android:layout_height="fill_parent">
+  
+	<RadioGroup 
+		android:id="@+id/QueGroup1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_gravity="center">
+	 
+	 	<RadioButton 
+		 	android:id="@+id/ascSort" 
+		 	android:checked="false"
+	 		android:text="Ascending"/>
+	 		
+	 	<RadioButton 
+		 	android:id="@+id/descSort" 
+		 	android:checked="false"
+	 		android:text="Descending"/>
+	 	
+	 	<RadioButton 
+	 		android:id="@+id/catSort" 
+	 		android:checked="false"	
+	 		android:text="Categories"/>
+	 
+	</RadioGroup>
+
+	<LinearLayout
+ 		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:orientation ="horizontal"
+		android:layout_gravity ="center">
+	 
+		<Button 
+    	    android:id="@+id/BtnSrtUpd"
+    	    android:text="Update"
+  			android:layout_margin="5px"
+    	    android:layout_width="80px"
+    	    android:textSize="17px"
+    	    android:layout_height="40px"/>
+
+	 	<Button 
+        	android:id="@+id/BtnSrtCnl"
+        	android:text="Cancel"
+  			android:layout_margin="5px"
+        	android:layout_width="80px"
+        	android:textSize="17px"
+        	android:layout_height="40px"/>
+
+    </LinearLayout>
+    
+</LinearLayout>

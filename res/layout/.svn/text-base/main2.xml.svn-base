@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:id="@+id/widget54"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  >
+  
+  <Spinner 
+        android:id="@+id/catSpinner"
+        android:layout_width="250px"
+        android:layout_height="wrap_content"
+        android:layout_gravity = "center"
+        android:prompt="@string/planet_prompt"
+        android:layout_marginTop="10px"
+    />
+    
+  <EditText
+  		android:id="@+id/AddCatName"   
+  		android:layout_height="wrap_content"     
+   		android:layout_width="250px"
+   		android:layout_gravity = "center"
+   		android:visibility="gone"
+  ></EditText>
+  
+  
+  <HorizontalScrollView
+    android:id="@+id/widget54"
+    android:layout_width="250px"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:scrollbars="horizontal"
+    android:fadeScrollbars="false"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+  
+
+<RadioGroup android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:visibility="gone"
+			android:orientation="horizontal"
+			android:layout_marginBottom="10px"
+			android:id="@+id/RadioColors">
+			
+	
+	<RadioButton android:id="@+id/radioRed" 
+				 android:checked="false"
+				 android:width="51px"
+				 android:layout_marginLeft="5px"
+				 android:layout_marginRight="5px"
+				 android:button="@drawable/red_radio"
+				 />
+				 
+	<RadioButton android:id="@+id/radioTur" 
+				 android:checked="false"
+				 android:width="51px"
+				 android:layout_marginLeft="5px"
+				 android:layout_marginRight="5px"
+                 android:button="@drawable/turquoise_radio"
+                 />
+                 
+   <RadioButton android:id="@+id/radioPur" 
+				 android:checked="false"
+				 android:width="51px"
+				 android:layout_marginLeft="5px"
+				 android:layout_marginRight="5px"
+				 android:button="@drawable/purple_radio"
+				 />
+				 
+	<RadioButton android:id="@+id/radioBlg" 
+				 android:checked="false"
+				 android:width="51px"
+				 android:layout_marginLeft="5px"
+				 android:layout_marginRight="5px"
+                 android:button="@drawable/bluegreen_radio"
+                 />
+		
+	<RadioButton android:id="@+id/option5" 
+				 android:checked="false"
+				 android:width="51px"
+				 android:layout_marginLeft="5px"
+				 android:layout_marginRight="5px"
+				 android:button="@drawable/yellow_radio"
+				 />
+
+	<RadioButton android:id="@+id/option6" 
+				 android:checked="false"
+				 android:width="51px"
+				 android:layout_marginLeft="5px"
+				 android:layout_marginRight="5px"
+                 android:button="@drawable/pink_radio"
+                 />
+     
+   <RadioButton android:id="@+id/radioLiG" 
+				 android:checked="false"
+				 android:button="@drawable/limegreen_radio"
+				 android:width="51px"
+                 android:layout_marginLeft="5px"
+				 android:layout_marginRight="5px"
+				 />
+				 
+	<RadioButton android:id="@+id/option8" 
+				 android:checked="false"
+                 android:button="@drawable/slateblue_radio"
+                 android:width="51px"
+                 android:layout_marginLeft="5px"
+				 android:layout_marginRight="5px"
+                 />
+                 
+    <RadioButton android:id="@+id/radioBlu" 
+				 android:checked="false"
+                 android:button="@drawable/blue_radio"
+                 android:width="51px"
+                 android:layout_marginLeft="5px"
+				 android:layout_marginRight="5px"
+                 />
+    <RadioButton android:id="@+id/radioGra" 
+				 android:checked="false"
+                 android:button="@drawable/gray_radio"
+                 android:width="51px"
+                 android:layout_marginLeft="5px"
+				 android:layout_marginRight="5px"
+                 />
+	<RadioButton android:id="@+id/radioPlu" 
+				 android:checked="false"
+                 android:button="@drawable/plum_radio"
+                 android:width="51px"
+                 android:layout_marginLeft="5px"
+				 android:layout_marginRight="5px"
+                 />
+	<RadioButton android:id="@+id/radioOra" 
+				 android:checked="false"
+                 android:button="@drawable/orange_radio"
+                 android:width="51px"
+                 android:layout_marginLeft="5px"
+				 android:layout_marginRight="5px"
+                 />
+</RadioGroup>
+</HorizontalScrollView>
+  <Spinner 
+        android:id="@+id/subcatSpinner"
+        android:layout_height="wrap_content"
+        android:layout_width="250px"
+        android:layout_gravity = "center"
+        android:prompt="@string/planet_prompt"
+    />
+	<EditText
+   		android:id="@+id/AddSubCatName"        
+   		android:layout_height="wrap_content"
+   		android:layout_width="250px"
+   		android:layout_gravity = "center"
+   		android:visibility="gone"
+	></EditText>
+	
+	<!--**************
+	 NAME AREA
+	 **************** -->
+	 <LinearLayout android:id="@+id/LinearLayout03"
+	        android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center">
+    
+    	<TextView    
+    	android:id="@+id/NameText"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_gravity="center"
+    	android.text="Name:"
+    	android:textSize="20sp"
+    	android:layout_marginTop="10px"
+  		/>
+  		
+		<EditText
+   			android:text="@string/AddTimerName"
+ 			android:id="@+id/AddTimerName"        
+  	 		android:layout_width="190px"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_marginTop="10px"
+			android:layout_marginLeft="5px"
+		></EditText>
+	</LinearLayout>
+  
+  <LinearLayout android:id="@+id/LinearLayout03"
+	        android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:layout_marginTop="15px">
+    <!-- android:textSize="16sp" -->
+     <Button android:id="@+id/addDate"
+    	android:onClick="AddDate_click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Date"
+     ></Button>
+     
+      <Button android:id="@+id/addTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="AddTime_click"
+        android:text="Add Time"
+      ></Button>
+      </LinearLayout>
+      
+      
+   <TextView android:id="@+id/timeDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:textSize="20sp"
+  />
+
+    <TextView android:id="@+id/dateDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:text=""/>
+        
+          
+ <!--  <Button
+    android:id="@+id/goback"
+    android:text="Go Back"
+    android:layout_width="250px"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:onClick="GoBack_Click"
+
+  ></Button>
+  
+    <Button android:id="@+id/opendb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="DatabaseOpen"
+        android:textSize="16sp"
+        android:text="Open db"
+      ></Button>
+      
+
+    <Button android:id="@+id/dropTables"
+    	android:onClick="DeleteTables"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Drop Table"
+     ></Button>
+     
+     <TextView android:id="@+id/DbRowDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/> -->
+	<LinearLayout android:id="@+id/LinearLayout03"
+	        android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center">
+    
+    	<Button android:id="@+id/submitTime"
+    	    android:layout_width="125px"
+    	    android:layout_height="50px"
+    	    android:layout_margin="20px"
+    	    android:onClick="Submit_Click"
+    	    android:text="Submit Time"
+    	    ></Button>
+       
+    <!--	<Button android:id="@+id/viewRecent"
+    	    android:layout_width="125px"
+    	    android:layout_height="50px"
+    	    android:onClick="Retrieve_Click"
+    	    android:text="View Recent"
+        ></Button>
+
+		<TextView android:id="@+id/recentInsert"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text=""/> -->
+ </LinearLayout>
+ 
+</LinearLayout>
+</ScrollView>

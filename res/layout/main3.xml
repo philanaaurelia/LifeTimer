@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    	android:id="@+id/widget56"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:background="@drawable/general_background"
+    >
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	  	android:id="@+id/mainLayout"
+	  	android:orientation="vertical"
+	  	android:layout_width="fill_parent"
+	  	android:layout_height="fill_parent"
+
+  	>
+<!-- 
+	<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	  	android:orientation="vertical"
+	  	android:layout_width="fill_parent"
+	  	android:background="@drawable/blue_bar"
+	  	android:layout_margin="0px"
+	  	android:padding="0px"
+	  	android:layout_height="fill_parent">
+	  	
+	  	<TableRow
+	  	android:paddingTop="5px"
+	  	android:paddingLeft="5px"
+	  	android:paddingRight="5px">
+ 			 <TextView    
+    			android:id="@+id/timer1"
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content"
+    			android:gravity="left"
+    			android:width="180px"
+    			android:text="Dummy Project Name"
+    			android:textSize="14sp"
+ 			 />
+ 			 <TextView    
+    			android:id="@+id/timer7"
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content"
+    			android:gravity="center"
+    			android:text="Days"
+    			android:textSize="15sp"
+    			android:width="32px"
+ 			 
+ 			 />
+ 			 <TextView    
+    			android:id="@+id/timer2"
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content"
+    			android:gravity="center"
+    			android:text="Hrs"
+    			android:textSize="15sp"
+    			android:width="30px"
+
+ 			 />
+ 			 <TextView    
+    			android:id="@+id/timer3"
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content"
+    			android:gravity="center"
+    			android:text="Min"
+    			android:width="30px"
+    			android:textSize="15sp"
+ 			 />
+ 			 <TextView    
+    			android:id="@+id/timer4"
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content"
+    			android:gravity="center"
+    			android:text="Sec"
+    			android:width="30px"
+    			android:textSize="15sp"
+ 			 />
+	  	</TableRow>
+	  	<TableRow
+	  	android:paddingLeft="5px"
+	  	android:paddingRight="5px">
+
+	  	 	<TextView    
+    			android:id="@+id/CatText"
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content"
+    			android:gravity="left"
+    			android:width="175px"
+    			android:text="Dummy Cat Name"
+    			android:textSize="13sp"
+ 			 />
+ 			 <TextView    
+    			android:id="@+id/DaysCnt"
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content"
+    			android:gravity="center"
+    			android:text="2"
+    			android:textSize="13sp"
+    			android:width="30px"
+ 			 
+ 			 />
+ 			 <TextView    
+    			android:id="@+id/HrsCnt"
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content"
+    			android:gravity="center"
+    			android:text="12"
+    			android:textSize="13sp"
+    			android:width="30px"
+
+ 			 />
+ 			 <TextView    
+    			android:id="@+id/MinCnt"
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content"
+    			android:gravity="center"
+    			android:text="36"
+    			android:width="30px"
+    			android:textSize="14sp"
+ 			 />
+ 			 <TextView    
+    			android:id="@+id/timer4"
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content"
+    			android:gravity="center"
+    			android:text="15"
+    			android:width="30px"
+    			android:textSize="14sp"
+ 			 />
+	  	</TableRow>
+	  	<TableRow>
+	  	<View/>
+	  	<View/>
+	  	<View/>
+	  	<TextView    
+    			android:id="@+id/timer9"
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:gravity="center"
+    			android:text="Edit |"
+    			android:textSize="9sp"
+ 			 />
+ 			 <TextView    
+    			android:id="@+id/timer9"
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:gravity="center"
+    			android:text="Delete"
+    			android:textSize="9sp"
+ 			 />
+	  	</TableRow>
+
+	</TableLayout>
+ 
+ -->
+	</LinearLayout>
+</ScrollView>

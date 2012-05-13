@@ -1,0 +1,11 @@
+package com.example.counterone;
+
+import android.app.Activity;
+import android.database.sqlite.SQLiteDatabase;
+
+public class ViewTimer extends Activity {
+	private SQLHelper pOpenHelper;
+	//SQLiteDatabase db = pOpenHelper.getReadableDatabase();
+
+
+}

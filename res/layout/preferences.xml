@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:background="@drawable/general_background">
+  
+	<PreferenceCategory android:title="Timers">
+			
+		<CheckBoxPreference
+			android:key="Pref_Timdel"
+			android:title="Automatic Delete"
+			android:defaultValue="true"
+			android:summary="Timer self deletes when expires" /> 
+			
+		<ListPreference
+           android:title="Notifications"
+           android:summary="How application responds to expired timers"
+           android:key="Pref_Notification"
+           android:defaultValue="1"
+           android:entries="@array/alarms"
+           android:entryValues="@array/alarms_values" />
+           
+		<ListPreference
+           android:title="Main Image"
+           android:summary="Specifies which image to display on front screen"
+           android:key="Pref_Mainimg"
+           android:defaultValue="1"
+           android:entries="@array/img"
+           android:entryValues="@array/img_values" />
+           
+           
+	</PreferenceCategory>
+</PreferenceScreen>

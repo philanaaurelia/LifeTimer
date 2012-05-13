@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  >
+  <ScrollView
+    android:id="@+id/TopScroll"
+    android:layout_width="fill_parent"
+    android:layout_height="120px"
+    android:scrollbars="horizontal"
+    android:background="#222222"
+    android:layout_weight="0.2"
+    >
+    <TableLayout
+      android:id="@+id/ScrollTable"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:orientation="vertical"
+      ></TableLayout>
+  </ScrollView>
+  <ListView
+    android:id="@+id/ResultsList"
+    android:layout_width="fill_parent"
+    android:layout_weight="0.8"
+    android:layout_height="fill_parent">
+    </ListView>
+  
+    </LinearLayout>
+
+<!--  <TableLayout
+android:id="@+id/widget76"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:orientation="vertical"
+xmlns:android="http://schemas.android.com/apk/res/android"
+>
+<ScrollView
+android:id="@+id/widget77"
+android:layout_width="fill_parent"
+android:layout_height="110px"
+android:padding="3px"
+android:scrollbarFadeDuration="2"
+android:scrollbars="vertical"
+android:background="#8b8989"
+>
+<TableLayout
+android:id="@+id/widget78"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:orientation="vertical"
+>
+<TableRow
+android:id="@+id/widget79"
+android:layout_width="fill_parent"
+android:layout_height="35px"
+android:orientation="horizontal"
+>
+<CheckBox
+android:id="@+id/CheckCat1"
+android:layout_width="150px"
+android:layout_height="fill_parent"
+android:text="Category1"
+>
+</CheckBox>
+<CheckBox
+android:id="@+id/CheckCat2"
+android:layout_width="150px"
+android:layout_height="fill_parent"
+android:text="Category2"
+>
+</CheckBox>
+</TableRow>
+<TableRow
+android:id="@+id/widget80"
+android:layout_width="fill_parent"
+android:layout_height="35px"
+android:orientation="horizontal"
+>
+<CheckBox
+android:id="@+id/CheckCat3"
+android:layout_width="150px"
+android:layout_height="fill_parent"
+android:text="Category3"
+>
+</CheckBox>
+<CheckBox
+android:id="@+id/CheckCat4"
+android:layout_width="150px"
+android:layout_height="fill_parent"
+android:text="Category4"
+>
+</CheckBox>
+</TableRow>
+<TableRow
+android:id="@+id/widget81"
+android:layout_width="fill_parent"
+android:layout_height="35px"
+android:orientation="horizontal"
+>
+<CheckBox
+android:id="@+id/CheckCat5"
+android:layout_width="150px"
+android:layout_height="fill_parent"
+android:text="Category5"
+>
+</CheckBox>
+<CheckBox
+android:id="@+id/CheckCat6"
+android:layout_width="150px"
+android:layout_height="fill_parent"
+android:text="Category6"
+>
+</CheckBox>
+</TableRow>
+</TableLayout>
+</ScrollView>
+<ScrollView
+android:id="@+id/widget88"
+android:layout_width="320px"
+android:layout_height="305px"
+>
+<TableLayout
+android:id="@+id/widget89"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:orientation="vertical"
+>
+<TableRow
+android:id="@+id/widget91"
+android:layout_width="fill_parent"
+android:layout_height="45px"
+android:orientation="horizontal"
+>
+<TableRow
+android:id="@+id/widget90"
+android:layout_width="fill_parent"
+android:layout_height="20px"
+android:orientation="horizontal"
+>
+</TableRow>
+</TableRow>
+<TableRow
+android:id="@+id/widget93"
+android:layout_width="fill_parent"
+android:layout_height="45px"
+android:orientation="horizontal"
+>
+</TableRow>
+<TableRow
+android:id="@+id/widget94"
+android:layout_width="fill_parent"
+android:layout_height="45px"
+android:orientation="horizontal"
+>
+</TableRow>
+<TableRow
+android:id="@+id/widget95"
+android:layout_width="fill_parent"
+android:layout_height="45px"
+android:orientation="horizontal"
+>
+</TableRow>
+<TableRow
+android:id="@+id/widget96"
+android:layout_width="fill_parent"
+android:layout_height="45px"
+android:orientation="horizontal"
+>
+</TableRow>
+</TableLayout>
+</ScrollView>
+</TableLayout>-->
+
+<!--  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+  
+    <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content">
+      
+        <EditText
+        android:id="@id/searchText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+        
+      <ScrollView
+        android:id="@+id/widget77"
+        android:layout_width="fill_parent"
+        android:layout_height="110px"
+        android:padding="3px"
+        android:scrollbarFadeDuration="2"
+        android:scrollbars="vertical"
+        android:background="#8b8989">
+        
+      <Button
+        android:id="@id/searchButton"
+        android:text="Search"
+        android:layout_width="wrap_context"
+        android:layout_height="wrap_content"/>
+        
+    </LinearLayout>
+    
+    <ListView
+      android:id="@id/list"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"/>
+</LinearLayout>"
+
+-->

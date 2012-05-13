@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:layout_gravity="center"
+  android:background="@drawable/general_background"
+  >
+  
+	<LinearLayout
+		android:layout_gravity="center"
+	  	android:orientation="horizontal"
+	  	android:layout_width="wrap_content"
+	  	android:layout_height="wrap_content"
+	  	android:layout_marginTop="15px"
+	  	android:padding="0px">  	
+	  	
+		<TextView
+			android:layout_width="wrap_content"
+ 			android:layout_height="wrap_content"
+ 			android:paddingTop="15px"
+ 			android:layout_marginTop="13px"
+ 			android:textSize="17sp"
+			android:text="Name: "
+        	android:gravity="right"/>
+        
+		<EditText
+			android:id="@+id/presetName"
+			android:layout_marginTop="15px"
+			android:layout_width="wrap_content"
+ 			android:layout_height="wrap_content"
+ 			android:layout_marginBottom="10px"
+			android:width="200px" />
+	
+    </LinearLayout>    
+   
+    <TableLayout
+	  	android:orientation="vertical"
+	  	android:layout_gravity="center"
+	  	android:layout_width="wrap_content"
+	  	android:layout_height="wrap_content"
+	  	android:layout_margin="0px"
+	  	android:padding="0px">
+	  	
+	  	<TableRow
+		  	android:paddingTop="5px"
+		  	android:paddingLeft="5px"
+		  	android:paddingRight="5px">
+	 
+	 		<EditText
+        		android:id="@+id/presetMin"
+        		android:layout_width="wrap_content"
+ 				android:layout_height="wrap_content"
+            	android:width="50px"
+            	android:padding="10px" />
+	 
+	 		<TextView android:checked="false"
+	 			android:id="@+id/min1" 
+	 			android:text="Min"/>
+	 	</TableRow>
+	 	<TableRow
+	  		android:paddingTop="5px"
+	  		android:paddingLeft="5px"
+	  		android:paddingRight="5px">
+	 
+	 		<EditText
+        		android:id="@+id/presetHrs"
+        		android:layout_width="wrap_content"
+ 				android:layout_height="wrap_content"
+        	    android:width="50px"
+        	    android:padding="10px" />
+	 
+	 		<TextView android:checked="false"
+	 			android:id="@+id/hour2" 
+	 			android:text="Hour"/>
+	 	</TableRow>
+	 	<TableRow
+	  		android:paddingTop="5px"
+	  		android:paddingLeft="5px"
+	  		android:paddingRight="5px">
+	 
+	 		<EditText
+        		android:id="@+id/presetDay"
+        		android:layout_width="wrap_content"
+ 				android:layout_height="wrap_content"
+            	android:width="50px"
+        	    android:padding="10px" />
+	 
+	 		<TextView android:id="@+id/day3" 
+	 			android:checked="false"
+	 			android:text="Day"/>
+	 	</TableRow>
+	 	<TableRow
+	 	 	android:paddingTop="5px"
+	 	 	android:paddingLeft="5px"
+	 	 	android:paddingRight="5px">
+	 
+	 		<EditText 
+	 			android:id="@+id/presetMonth"
+        		android:layout_width="wrap_content"
+ 				android:layout_height="wrap_content"
+        	    android:width="50px"
+        	    android:padding="10px" />
+	 
+	 
+	 		<TextView android:checked="false"
+	 			android:id="@+id/month4" 
+	 			android:text="Month"/>
+		</TableRow>
+		<TableRow
+		  	android:paddingTop="5px"
+		  	android:paddingLeft="5px"
+		  	android:paddingRight="5px">
+	
+			 <EditText
+        		android:id="@+id/presetYear"
+        		android:layout_width="wrap_content"
+ 				android:layout_height="wrap_content"
+        	    android:width="50px"
+        	    android:padding="10px" />
+            
+            <TextView 
+            	android:id="@+id/year5" 
+            	android:checked="false"
+	 			android:text="Year"/>
+            
+		</TableRow>
+	</TableLayout>
+	 
+	<Button 
+		android:id="@+id/PresetSubmit"
+		android:text="Submit"
+		android:layout_marginTop="10px"
+  		android:layout_height="40px"
+        android:layout_width="wrap_content"
+        android:textSize="17px"
+        android:layout_gravity="center"
+        android:onClick="Submit_click"
+        />
+   
+</LinearLayout>

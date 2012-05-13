@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/mainLL"
+	android:orientation="vertical"
+ 	android:layout_width="fill_parent"
+  	android:layout_height="fill_parent"
+  	android:background="@drawable/background">
+  	
+  
+    <TextView    
+    	android:id="@+id/timer"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:gravity="center"
+    	android:textSize="15sp"
+    	android:padding="20sp"/>
+    	
+    <!--  This is for the rotating Images -->	
+  	<ImageView
+  		android:id="@+id/panic_img"   
+  		android:layout_width="170px"
+  		android:layout_height="wrap_content"
+  		android:visibility="gone"
+  		android:layout_gravity="center"
+  		android:layout_marginTop="0px"
+  		android:src="@drawable/panic_time"/>
+  		
+  
+  	<ImageView   
+  		android:id="@+id/proc_img" 
+  		android:layout_width="170px"
+  		android:layout_height="wrap_content"
+  		android:visibility="gone"
+  		android:layout_gravity="center"
+  		android:layout_marginTop="0px"
+  		android:src="@drawable/procrastinate_time"/>
+  
+  	<ImageView   
+  		android:id="@+id/set_img" 
+  		android:layout_width="170px"
+  		android:layout_height="wrap_content"
+  		android:layout_gravity="center"
+  		android:layout_marginTop="0px"
+  		android:src="@drawable/set_time"/>
+  
+  	<ImageView
+  		android:id="@+id/wait_img"    
+  		android:layout_width="170px"
+  		android:layout_height="wrap_content"
+  		android:visibility="gone"
+  		android:layout_gravity="center"
+  		android:layout_marginTop="0px"
+  		android:src="@drawable/wait_time"/>
+  
+  <!--  These are the button options at the bottom of the page -->
+  	<ImageButton
+    	android:id="@+id/control"
+    	android:background="@drawable/create_button"
+    	android:layout_width="140px"
+    	android:layout_height="50px"
+    	android:layout_gravity="center"
+    	android:layout_marginTop="-25px"
+    	android:onClick="Create_click"/>
+  
+  <ImageButton
+  		android:id="@+id/preset"
+    	android:background="@drawable/preset_button"
+    	android:layout_width="140px"
+    	android:layout_height="50px"
+  	  	android:layout_gravity="center"
+  	  	android:onClick="Preset_click"
+  	  	android:layout_marginTop="10px" />
+  
+	<ImageButton
+  		android:id="@+id/view"
+    	android:background="@drawable/view_button"
+    	android:layout_width="140px"
+    	android:layout_height="50px"
+  	  	android:layout_gravity="center"
+  	  	android:onClick="View_click"
+  	  	android:layout_marginTop="10px" />
+
+</LinearLayout>
+
+
