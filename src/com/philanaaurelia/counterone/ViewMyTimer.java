@@ -159,7 +159,7 @@ public class ViewMyTimer extends Activity {
 	        	startActivityForResult(myIntent, 0);
 	            return true;
 	        case DELETE_ID:
-	        	myIntent = new Intent(this.getBaseContext(), Delete.class);
+	        	myIntent = new Intent(this.getBaseContext(), DeleteTimer.class);
 	        	startActivityForResult(myIntent, 0);
 	            return true;
 	        case ADD_TIMER_ID:
