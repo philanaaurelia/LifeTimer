@@ -13,26 +13,26 @@ import android.os.Bundle;
 
 
 public class DialogHelper extends AlertDialog {
-	//private AlertDialog dialog=null;
-	
-	  @Override
-		public void onCreate(Bundle savedInstanceState) {
-			System.out.println("OPENED");
-	    	super.onCreate(savedInstanceState);
-	  }
-	  
-	  DialogHelper(Context context) {
-			 super(context,0);
-	  }
-	  
-	  public AlertDialog set(String title, String message, String btn1){
-		  setTitle(title);
-		  setMessage(message);
-		  setButton(btn1, new DialogInterface.OnClickListener() {
-		      public void onClick(DialogInterface dialog, int which) {
-			        return;
-			    } });
-		  return this;
-	  }
+    //private AlertDialog dialog=null;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        System.out.println("OPENED");
+        super.onCreate(savedInstanceState);
+    }
+
+    DialogHelper(Context context) {
+        super(context,0);
+    }
+
+    public AlertDialog set(String title, String message, String btn1){
+        setTitle(title);
+        setMessage(message);
+        setButton(btn1, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                return;
+            } });
+        return this;
+    }
 
 }

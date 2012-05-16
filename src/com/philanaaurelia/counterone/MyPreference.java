@@ -5,12 +5,9 @@ import android.preference.PreferenceActivity;
 import android.os.Bundle;
 
 public class MyPreference extends PreferenceActivity {
-	
-	@Override
+    @Override
     public void onCreate(Bundle savedInstanceState) {
-    	super.onCreate(savedInstanceState);
-    	
-    	addPreferencesFromResource(R.layout.preferences);
-	}
-
+        super.onCreate(savedInstanceState);
+        addPreferencesFromResource(R.layout.preferences);
+    }
 }

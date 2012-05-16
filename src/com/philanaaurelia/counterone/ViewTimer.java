@@ -25,7 +25,7 @@ public class ViewTimer extends Activity {
         try {
             database.open();
             System.out.println("Just Opened VTdb");
-	    } catch(SQLException sqle){
+        } catch(SQLException sqle){
             throw sqle;
         }
 
@@ -50,15 +50,15 @@ public class ViewTimer extends Activity {
 
             //Loop through all Results
             do{
-            //Retrieve the value of the Entry the Cursor is pointing to
-            	String CategoryName = databaseCursor.getString(CatNameColumn);
-            	String Color = databaseCursor.getString(CatColor);
+                //Retrieve the value of the Entry the Cursor is pointing to
+                String CategoryName = databaseCursor.getString(CatNameColumn);
+                String Color = databaseCursor.getString(CatColor);
 
-            	//add current entry to results
-            	categoryNameQueryResults.add(CategoryName);
-            	categoryColorQueryResults.add(Color);
-            	System.out.println("Inside the do");
-            	System.out.println(CategoryName);
+                //add current entry to results
+                categoryNameQueryResults.add(CategoryName);
+                categoryColorQueryResults.add(Color);
+                System.out.println("Inside the do");
+                System.out.println(CategoryName);
             }
             while(databaseCursor.moveToNext());
 
@@ -102,28 +102,28 @@ public class ViewTimer extends Activity {
                     CBCount = 0;
                     catsLeft--;
                 }
-                
+
                 if (idCount < categoryNameQueryResults.size()){
-                	//Create a CheckBox to add to row-content
-                	cb = new CheckBox(this);
+                    //Create a CheckBox to add to row-content
+                    cb = new CheckBox(this);
 
-                	//To allow access to drawables
-                	Resources res = getResources();
-                	Drawable d = null;
+                    //To allow access to drawables
+                    Resources res = getResources();
+                    Drawable d = null;
 
-                	//sets the checkboxes color from database
-                	//System.out.println("Color = " + categoryColorQueryResults.get(idCount));
+                    //sets the checkboxes color from database
+                    //System.out.println("Color = " + categoryColorQueryResults.get(idCount));
 
-                	cb.setId(idCount);
-                	cb.setTextSize(18);
+                    cb.setId(idCount);
+                    cb.setTextSize(18);
 
-                	//Set CheckBox text to Query result from Database
-                	cb.setText("   " + categoryNameQueryResults.get(idCount));
+                    //Set CheckBox text to Query result from Database
+                    cb.setText("   " + categoryNameQueryResults.get(idCount));
 
-                	//Add CheckBox to Table Row
-                	tr.addView(cb);
-                	CBCount++;
-                	idCount++;
+                    //Add CheckBox to Table Row
+                    tr.addView(cb);
+                    CBCount++;
+                    idCount++;
                 }
             }
             i++;
