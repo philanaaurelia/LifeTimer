@@ -1,95 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical"
- 	android:layout_width="fill_parent"
-  	android:layout_height="fill_parent">
-  
-	<RadioGroup 
-		android:id="@+id/QueGroup1"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:orientation="horizontal"
-		android:layout_gravity="center">
-	 
-	 	<RadioButton 
-		 	android:id="@+id/del1" 
-		 	android:checked="false"
-	 		android:text="Category"/>
-	 	
-	 	<RadioButton 
-	 		android:id="@+id/del2" 
-	 		android:checked="false"	
-	 		android:text="Timer"/>
-	 
-	</RadioGroup>
-	 
-	<LinearLayout
-		android:id="@+id/LL_CatChkBox"
- 		android:layout_width="wrap_content"
- 		android:visibility = "invisible"
-  		android:layout_height="wrap_content"
-  		android:orientation ="horizontal"
-		android:layout_gravity ="center">
-	 
-		<CheckBox 
-		 	android:id="@+id/Check1" 
-		 	android:checked="false"
-		 	android:layout_width="wrap_content"
-	 		android:layout_height="wrap_content"
-		 	android:text="Include Timers"/>
-	
-	 	<Button
-	 		android:id="@+id/Text1"
-	 		android:padding="5px"
-	 		android:text="\?"
-	 		android:width="35px"
-	 		android:height="30px"
-	 		android:onClick="IncludeTimer_Click"
-	 		android:layout_width="wrap_content"
- 			android:layout_height="wrap_content"
- 			android:layout_gravity="center"
- 			android:textSize="25sp"
-		 	android:textStyle="bold"/>
-	 	
-	 </LinearLayout>
-	 
-	 <Spinner 
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RadioGroup
+        android:id="@+id/QueGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <RadioButton
+            android:id="@+id/del1"
+            android:checked="false"
+            android:text="Category" />
+
+        <RadioButton
+             android:id="@+id/del2"
+             android:checked="false"
+             android:text="Timer" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/LL_CatChkBox"
+        android:layout_width="wrap_content"
+        android:visibility="invisible"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <CheckBox
+            android:id="@+id/Check1"
+            android:checked="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Include Timers" />
+
+        <Button
+            android:id="@+id/Text1"
+            android:padding="5px"
+            android:text="\?"
+            android:width="35px"
+            android:height="30px"
+            android:onClick="IncludeTimer_Click"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <Spinner 
         android:id="@+id/deltimSpinner"
         android:layout_height="wrap_content"
         android:layout_width="250px"
         android:layout_gravity = "center"
         android:visibility="gone" />
-    
+
     <Spinner 
         android:id="@+id/delcatSpinner"
         android:layout_height="wrap_content"
         android:layout_width="250px"
         android:layout_gravity = "center"
         android:visibility="invisible"/>
-        
-	<LinearLayout
- 		android:layout_width="wrap_content"
-  		android:layout_height="wrap_content"
-  		android:orientation ="horizontal"
-		android:layout_gravity ="center">
-	 
-		<Button 
-    	    android:id="@+id/ButtonDelete1"
-    	    android:text="Delete"
-  			android:layout_margin="5px"
-    	    android:layout_width="80px"
-    	    android:textSize="17px"
-    	    android:layout_height="40px"/>
 
-	 	<Button 
-        	android:id="@+id/ButtonDone1"
-        	android:text="Cancel"
-  			android:layout_margin="5px"
-        	android:layout_width="80px"
-        	android:textSize="17px"
-        	android:layout_height="40px"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
 
+        <Button
+            android:id="@+id/ButtonDelete1"
+            android:text="Delete"
+            android:layout_margin="5px"
+            android:layout_width="80px"
+            android:textSize="17px"
+            android:layout_height="40px" />
+
+        <Button 
+            android:id="@+id/ButtonCancel1"
+            android:text="Cancel"
+            android:layout_margin="5px"
+            android:layout_width="80px"
+            android:textSize="17px"
+            android:layout_height="40px"/>
     </LinearLayout>
-    
 </LinearLayout>

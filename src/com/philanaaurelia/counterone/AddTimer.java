@@ -18,7 +18,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -34,20 +33,15 @@ public class AddTimer extends Activity {
     static final int GONE = 8;
     static final int VISIBLE = 0;
 
-    Button timeEditBtn, dateEditBtn;
     EditText createCategoryEditText, createTimerNameEditText;
     TextView timerNameTextView, desiredTimeTextView, desiredDateTextView;
     Spinner timerCategorySpinner;
     RadioGroup categoryColorRadioGroup;
-    RadioButton categoryBlueGreenRadioBtn, categoryBlueRadioBtn, categoryGrayRadioBtn, categoryLimeRadioBtn,
-                categoryOrangeRadioBtn, categoryPlumOption,categoryPurpleRadioBtn, categoryRedRadioBtn,
-                categoryTurquoiseRadioBtn, categoryYellowRadioBtn, categoryPinkRadioBtn, categorySlateRadioBtn;
     ArrayAdapter<String> categoryAdapterArray;
 
     //variables for time and date settings
     Time desiredTime = new Time();
     Boolean isCategoryChosen = false; // no category is chosen as spinner option
-    Cursor ptr;
     SQLHelper datab = new SQLHelper(this);
 
     @Override
@@ -57,8 +51,6 @@ public class AddTimer extends Activity {
         setContentView(R.layout.addtimer);
 
         // capture our View elements
-        dateEditBtn = (Button) findViewById(R.id.addDate);
-        timeEditBtn = (Button) findViewById(R.id.addTime);
         createTimerNameEditText = (EditText) findViewById(R.id.AddTimerName);
         createCategoryEditText = (EditText) findViewById(R.id.AddCatName);
         desiredTimeTextView = (TextView) findViewById(R.id.timeDisplay);
@@ -66,18 +58,6 @@ public class AddTimer extends Activity {
         timerNameTextView = (TextView) findViewById(R.id.NameText);
         timerCategorySpinner = (Spinner) findViewById(R.id.catSpinner);
         categoryColorRadioGroup = (RadioGroup) findViewById(R.id.RadioColors);
-        categoryBlueGreenRadioBtn = (RadioButton) findViewById(R.id.radioBlg);
-        categoryBlueRadioBtn = (RadioButton) findViewById(R.id.radioBlu);
-        categoryGrayRadioBtn = (RadioButton) findViewById(R.id.radioGra);
-        categoryLimeRadioBtn = (RadioButton) findViewById(R.id.radioLiG);
-        categoryOrangeRadioBtn = (RadioButton) findViewById(R.id.radioOra);
-        categoryPlumOption = (RadioButton) findViewById(R.id.radioPlu);
-        categoryPurpleRadioBtn = (RadioButton) findViewById(R.id.radioPur);
-        categoryRedRadioBtn = (RadioButton) findViewById(R.id.radioRed);
-        categoryTurquoiseRadioBtn = (RadioButton) findViewById(R.id.radioTur);
-        categoryYellowRadioBtn = (RadioButton) findViewById(R.id.radioYel);
-        categoryPinkRadioBtn = (RadioButton) findViewById(R.id.radioPin);
-        categorySlateRadioBtn = (RadioButton) findViewById(R.id.radioSlB);
 
         desiredTime.setToNow();
         updateTime();
@@ -89,12 +69,12 @@ public class AddTimer extends Activity {
     public void SubmitTimer_Click(View view){
         DialogHelper dialog = new DialogHelper(this);
         Time currentTime = new Time();
-        Integer inputDate = (1000000 * desiredTime.year) + desiredTime.monthDay + 10000 * (desiredTime.monthDay + 1);
+        Integer inputDate = (1000000 * desiredTime.year) + desiredTime.monthDay + 10000 * (desiredTime.month + 1);
         Integer inputTime = 1000000 + (10000 * desiredTime.hour) + (100 * desiredTime.minute) + 60;
-        Integer radio_btn = categoryColorRadioGroup.getCheckedRadioButtonId();
+        Integer radioBtnColorID = categoryColorRadioGroup.getCheckedRadioButtonId();
         String timerName = createTimerNameEditText.getText().toString();
         String categoryName = createCategoryEditText.getText().toString(); //If cat was chosen from spinner, pAddCatNAme text was set to cat name
-        Log.w("RADIO BUTTON", String.valueOf(radio_btn));
+        //Log.w("RADIO BUTTON", String.valueOf(radioBtnColorID));
 
         datab.open();
         currentTime.setToNow();
@@ -111,7 +91,7 @@ public class AddTimer extends Activity {
             //If it's a new category (Note both new category and no category return -1)
             if(categoryAdapterArray.getPosition(categoryName) < 0){
                 if(isCategoryChosen == false)
-                    datab.Insert(new String[]{"Categories", categoryName, returnColorString()});
+                    datab.Insert(new String[]{"Categories", categoryName, returnColorString(radioBtnColorID)});
             }
 
             /*Log.w("TIMERNAME", timerName);
@@ -120,15 +100,15 @@ public class AddTimer extends Activity {
             Log.w("TIME", String.valueOf(inputTime));*/
 
             //Handles no color selection for category by user
-            String timerColorName = null;
+            String categoryColorName = null;
             if(categoryName.length() == 0){
                 categoryName = null;
-                timerColorName = returnColorString();
+                categoryColorName = returnColorString(radioBtnColorID);
             }
 
             //Log.w("CATEGORY NAME", categoryName);
             datab.Insert(new String[]{"Timers", categoryName, null, timerName, 
-                    String.valueOf(inputDate), String.valueOf(inputTime), timerColorName});
+                  String.valueOf(inputDate), String.valueOf(inputTime), categoryColorName});
             Log.w("TIMER","Inserted to database");	
             datab.Close();
 
@@ -141,110 +121,77 @@ public class AddTimer extends Activity {
 
     //Returns the color of category to be saved depending
     //on which radio button was pushed
-    public String returnColorString(){
-        if (categoryBlueGreenRadioBtn.isChecked())
-            return "bluegreen";
-        else if (categoryBlueRadioBtn.isChecked())
-            return "blue";
-        else if (categoryGrayRadioBtn.isChecked())
-            return "gray";
-        else if (categoryLimeRadioBtn.isChecked())
-            return "limegreen";
-        else if (categoryOrangeRadioBtn.isChecked())
-            return "orange";
-        else if (categoryPlumOption.isChecked())
-            return "plum";
-        else if (categoryPurpleRadioBtn.isChecked())
-            return "purple";
-        else if (categoryRedRadioBtn.isChecked())
-            return "red";
-        else if (categoryTurquoiseRadioBtn.isChecked())
-            return "turquoise";
-        else if (categoryPinkRadioBtn.isChecked())
-            return "pink";
-        else if (categoryYellowRadioBtn.isChecked())
-            return "yellow";
-        else if (categorySlateRadioBtn.isChecked())
-            return "slateblue";
-        else
-            return "black";
+    public String returnColorString(int radioBtnID){
+        RadioButton colorBtn;
+        
+        colorBtn = (RadioButton) categoryColorRadioGroup.findViewById(radioBtnID);
+        
+        return (String) colorBtn.getTag();
     }
-
-
-    /*************************************
-    //
-    //SPINNER FUNCTIONS
-    //
-     **************************************/
 
     public void SetUpSpinners(){
         categoryAdapterArray = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item); 
         categoryAdapterArray.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        timerCategorySpinner.setAdapter(categoryAdapterArray); 
-
         categoryAdapterArray.add("Choose Category (opt)");
         categoryAdapterArray.add("Create New...");
-        timerCategorySpinner.setOnItemSelectedListener(new SpinnerListener(createCategoryEditText));
+        timerCategorySpinner.setAdapter(categoryAdapterArray); 
+        timerCategorySpinner.setOnItemSelectedListener(new SpinnerListener());
 
-        PopulateSpinners(categoryAdapterArray, new String[]{"Categories","CategoryName"});
+        PopulateSpinner(categoryAdapterArray, new String[]{"Categories","CategoryName"});
     }
 
-    //Populates Spinners with database
-    public void PopulateSpinners(ArrayAdapter<String> s, String[] values){
+    //Populates Spinners with database values
+    public void PopulateSpinner(ArrayAdapter<String> categoryNames, String[] values){
+        Cursor ptr;
         ptr = datab.Results(new String[]{values[0],values[1]},"spinner");
 
         if (ptr.moveToFirst())
             do {
-                s.add(ptr.getString(ptr.getColumnIndex(values[1])));
-            }while (ptr.moveToNext()); 
+                categoryNames.add(ptr.getString(ptr.getColumnIndex(values[1])));
+            } while (ptr.moveToNext()); 
     }
 
     //This class handles the listener on a selected item from spinner
     public class SpinnerListener implements OnItemSelectedListener {
-        EditText s;
-        SpinnerListener(EditText text){
-            s = text;
-        }
+
 
         public void onItemSelected(AdapterView<?> parent,
                 View view, int pos, long id) {
             switch(pos){
-            //If user chooses nothing, it does nothing
-            case 0:
-                isCategoryChosen = true;
-                createCategoryEditText.setText("");
-                categoryColorRadioGroup.setVisibility(GONE);
-                s.setVisibility(GONE);
-                break;
-                //If user chooses create new, EditBox pops up
-            case 1:
-                isCategoryChosen = false;
-                createCategoryEditText.setText("");
-                categoryColorRadioGroup.setVisibility(VISIBLE);
-                s.setVisibility(VISIBLE);
-                s.requestFocus();
-                break;
-                //If user choose a category from the database,	
-            default:
-                isCategoryChosen = false;
-                createCategoryEditText.setText(categoryAdapterArray.getItem(pos));
-                categoryColorRadioGroup.setVisibility(GONE);
-                s.setVisibility(GONE);
-                break;
+                //If user chooses nothing, it does nothing
+                case 0:
+                    isCategoryChosen = true;
+                    createCategoryEditText.setText("");
+                    categoryColorRadioGroup.setVisibility(GONE);
+                    createCategoryEditText.setVisibility(GONE);
+                    break;
+                    //If user chooses create new, EditBox pops up
+                case 1:
+                    isCategoryChosen = false;
+                    createCategoryEditText.setText("");
+                    categoryColorRadioGroup.setVisibility(VISIBLE);
+                    createCategoryEditText.setVisibility(VISIBLE);
+                    createCategoryEditText.requestFocus();
+                    break;
+                    //If user choose a category from the database,	
+                default:
+                    isCategoryChosen = false;
+                    createCategoryEditText.setText(categoryAdapterArray.getItem(pos));
+                    categoryColorRadioGroup.setVisibility(GONE);
+                    createCategoryEditText.setVisibility(GONE);
+                    break;
             }
         }
 
         public void onNothingSelected(@SuppressWarnings("rawtypes") AdapterView parent) {
-            //Have an error box that says choose a category or maybe no category
+            //TODO: Have an error box that says choose a category or maybe no category
 
         }
     }
 
 
     /*************************************
-    //
     //			TIMER FUNCTIONS
-    //
      **************************************/
 
     public void AddTime_click(View view){
@@ -301,29 +248,27 @@ public class AddTimer extends Activity {
             displayHour = 12;
 
         desiredTimeTextView.setText(
-                new StringBuilder()
-                .append("Time: ")
-                .append(pad(displayHour)).append(":")
-                .append(pad(desiredTime.minute))
-                .append(occasion));
+            new StringBuilder()
+            .append("Time: ")
+            .append(formatTime(displayHour)).append(":")
+            .append(formatTime(desiredTime.minute))
+            .append(occasion));
     }
 
     private void updateDate(){
         desiredDateTextView.setText(
-                new StringBuilder()
-                // Month is 0 based so add 1
-                .append("Date: ")
-                .append(desiredTime.month + 1).append("-")
-                .append(desiredTime.monthDay).append("-")
-                .append(desiredTime.year).append(" "));
+            new StringBuilder()
+            // Month is 0 based so add 1
+            .append("Date: ")
+            .append(desiredTime.month + 1).append("-")
+            .append(desiredTime.monthDay).append("-")
+            .append(desiredTime.year).append(" "));
     }
 
-    private static String pad(int c) {
+    private static String  formatTime(int c) {
         if (c >= 10)
             return String.valueOf(c);
         else
             return "0" + String.valueOf(c);
     }
-
-
 }

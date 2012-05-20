@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="@drawable/general_background">
 
-        <ScrollView android:id="@+id/sroller"
+        <ScrollView
+            android:id="@+id/sroller"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent">
 
             <LinearLayout
                 android:id="@+id/mainLsL"
-                android:orientation="vertical" android:layout_width="fill_parent"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
   
                 <Spinner 
@@ -31,7 +34,8 @@
                     android:visibility="gone"
                     android:layout_marginBottom="10px"/>
 
-                <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                <HorizontalScrollView 
+                    xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/widget54"
                     android:layout_width="250px"
                     android:layout_height="wrap_content"
@@ -48,7 +52,8 @@
                         android:layout_marginBottom="10px">
 
                         <RadioButton 
-                            android:id="@+id/radioRed" 
+                            android:id="@+id/radioRed"
+                            android="red"
                             android:checked="false"
                             android:width="51px"
                             android:layout_marginLeft="5px"
@@ -56,7 +61,8 @@
                             android:button="@drawable/red_radio"/>
 
                         <RadioButton 
-                            android:id="@+id/radioTur" 
+                            android:id="@+id/radioTur"
+                            android:tag="turquoise"
                             android:checked="false"
                             android:width="51px"
                             android:layout_marginLeft="5px"
@@ -65,6 +71,7 @@
 
                         <RadioButton 
                             android:id="@+id/radioPur" 
+                            android:tag="purple"
                             android:checked="false"
                             android:width="51px"
                             android:layout_marginLeft="5px"
@@ -72,7 +79,8 @@
                             android:button="@drawable/purple_radio" />
 
                         <RadioButton 
-                            android:id="@+id/radioBlg" 
+                            android:id="@+id/radioBlg"
+                            android:tag="bluegreen"
                             android:checked="false"
                             android:width="51px"
                             android:layout_marginLeft="5px"
@@ -80,7 +88,8 @@
                             android:button="@drawable/bluegreen_radio"/>
 
                         <RadioButton 
-                            android:id="@+id/radioYel" 
+                            android:id="@+id/radioYel"
+                            android:tag="yellow"
                             android:checked="false"
                             android:width="51px"
                             android:layout_marginLeft="5px"
@@ -89,6 +98,7 @@
 
                         <RadioButton 
                             android:id="@+id/radioPin" 
+                            android:tag="pink"
                             android:checked="false"
                             android:width="51px"
                             android:layout_marginLeft="5px"
@@ -96,7 +106,8 @@
                             android:button="@drawable/pink_radio"/>
 
                         <RadioButton 
-                            android:id="@+id/radioLiG" 
+                            android:id="@+id/radioLiG"
+                            android:tag="limegreen"
                             android:checked="false"
                             android:button="@drawable/limegreen_radio"
                             android:width="51px"
@@ -104,7 +115,8 @@
                             android:layout_marginRight="5px"/>
 
                         <RadioButton 
-                            android:id="@+id/radioSlB" 
+                            android:id="@+id/radioSlB"
+                            android:tag="slateblue"
                             android:checked="false"
                             android:button="@drawable/slateblue_radio"
                             android:width="51px"
@@ -112,7 +124,8 @@
                             android:layout_marginRight="5px"/>
                                  
                         <RadioButton 
-                            android:id="@+id/radioBlu" 
+                            android:id="@+id/radioBlu"
+                            android:tag="blue"
                             android:checked="false"
                             android:button="@drawable/blue_radio"
                             android:width="51px"
@@ -120,7 +133,8 @@
                             android:layout_marginRight="5px"/>
 
                         <RadioButton 
-                            android:id="@+id/radioGra" 
+                            android:id="@+id/radioGra"
+                            android:tag="gray"
                             android:checked="false"
                             android:button="@drawable/gray_radio"
                             android:width="51px"
@@ -129,6 +143,7 @@
 
                         <RadioButton  
                             android:id="@+id/radioPlu" 
+                            android:tag="plum"
                             android:checked="false"
                             android:button="@drawable/plum_radio"
                             android:width="51px"
@@ -137,6 +152,7 @@
 
                         <RadioButton 
                             android:id="@+id/radioOra" 
+                            android:tag="orange"
                             android:checked="false"
                             android:button="@drawable/orange_radio"
                             android:width="51px"

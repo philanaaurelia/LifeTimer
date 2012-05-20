@@ -27,7 +27,7 @@
         <activity android:name =".AboutUs"
         		  android:label = "About Us"
         		  android:theme ="@android:style/Theme.Dialog"></activity>
-        <activity android:name=".Delete"
+        <activity android:name=".DeleteTimer"
         		  android:label = "Delete"
         		  android:theme ="@android:style/Theme.Dialog"></activity>
        	<activity android:name=".Sort"
